@@ -1,66 +1,81 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Hero from "@/components/Hero";
+import "./style.css"
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div>
+      <Hero/>
+
+      <div className="info-container">
+        
+      <section className="skills">
+        <h2>Expertise</h2>
+
+        {[
+          ["HTML", "95%"],
+          ["CSS", "90%"],
+          ["JavaScript", "90%"],
+          ["React", "95%"],
+          ["Next.js", "90%"],
+          ["Node.js", "80%"],
+          ["MongoDB", "80%"],
+        ].map(([name, percent]) => (
+          <div className="skill" key={name}>
+            <div className="skill-title">
+              <span>{name}</span>
+              <span>{percent}</span>
+            </div>
+            <div className="bar">
+              <div style={{ width: percent }}></div>
+            </div>
+          </div>
+        ))}
+      </section>
+
+      <section className="services">
+        <h2>Services</h2>
+        <div className="grid">
+          <div className="card">Web App Development</div>
+          <div className="card">E-commerce Solutions</div>
+          <div className="card">API Development</div>
+          <div className="card">Performance Optimization</div>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <section className="services">
+        <h2>Projects</h2>
+        <div className="grid">
+          <div className="card">E-commerce Platform</div>
+          <div className="card">SaaS Dashboard</div>
+          <div className="card">Landing Page Builder</div>
+          <div className="card">Portfolio Generator</div>
         </div>
-      </main>
+      </section>
+      </div>
+
+      <section className="experience">
+        <h2>Experience</h2>
+        <ul>
+          <li><strong>2024 - Present:</strong> Freelance Full Stack Developer</li>
+          <li><strong>2023:</strong> Built multiple client projects</li>
+          <li><strong>2022:</strong> Learned MERN stack deeply</li>
+        </ul>
+      </section>
+
+      <section className="contact">
+        <h2>Contact Me</h2>
+        <form>
+          <input placeholder="Your Name" />
+          <input placeholder="Your Email" />
+          <textarea placeholder="Your Message"></textarea>
+          <button>Send Message</button>
+        </form>
+      </section>
+      <footer className="footer">
+        © {new Date().getFullYear()} Saiful Islam. All rights reserved.
+      </footer>
     </div>
   );
 }
