@@ -21,7 +21,7 @@ export default function Hero() {
       <div className="hero-col hero-info">
         <ul className="info-list">
           <li><a href="tel:+8801648898129"><span><i className="fa-solid fa-phone"></i></span> +880 1648898129</a></li>
-          <li><a href="mailto:saifislamgfx@gmail.com"><span><i className="fa-solid fa-message"></i></span> saifislamgfx@gmail.com</a></li>
+          <li><a href="mailto:saifulislamwebdev@gmail.com"><span><i className="fa-solid fa-message"></i></span> saifulislamwebdev@gmail.com</a></li>
           <li><span><i className="fa-solid fa-location-arrow"></i></span>mazar road, Mirpur 1, Dhaka, Bangladesh</li>
           <li><span><i className="fa-solid fa-file"></i></span><a href="/files/cv-saiful.pdf" download="CV-SAIFUL.pdf">Download my CV</a></li>
         </ul>
