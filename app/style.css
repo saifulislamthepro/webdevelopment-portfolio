@@ -124,7 +124,7 @@ h2 {
   font-size: 2.2rem;
   margin-bottom: 30px;
   background: linear-gradient(to right, #00f0ff, #7b61ff);
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: #111;
 }
 
 /* ABOUT */
